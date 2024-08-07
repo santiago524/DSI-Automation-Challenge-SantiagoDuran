@@ -14,7 +14,7 @@ necesitas las siguientes librerias:
 pip install + #Librarie's name
 ```
 
-### Instalación 🔧
+### Funciones🔧
 
 Esta función me abre el navegador Microsoft Edge y utilizando la imagen 'bar.png' dentro de la carpeta principal 'PRUEBA' para encontrar la barra de busquedad, hacer click, y buscar la pagina principal de google.
 
