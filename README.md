@@ -92,6 +92,14 @@ def add_keywords(self, palabra):
         print(f'Palabra clave "{palabra}" agregada a la lista.')
 ```
 
+Esta función muestra las palabras clave ya ingresadas.
+```
+def show_keywords(self):
+        print("Palabras clave actuales:")
+        for palabra in self.keywords_selected:
+            print(f'- {palabra}')
+```
+
 Esta función me obtiene el correo del aspirante en la hoja de vida.
 ```
 def get_email(text):
@@ -170,7 +178,7 @@ def open_doc(self, doc, keywords):
     - 'screenshots': Almacena las capturas realizadas en las regiones donde se encuentran las palabras clave.
 
     - 'Aspirantes_aprobados': Almacena los correos de los aspirantes que cumplen con las aptitudes deseadas por la empresa.
-    
+
     - 'Aspirantes_no_aprobados': Almacena los correos de los aspirantes que no cumplen con las aptitudes deseadas por la empresa.
 
 
