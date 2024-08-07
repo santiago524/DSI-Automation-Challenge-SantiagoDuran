@@ -146,25 +146,32 @@ def open_doc(self, doc, keywords):
 
 * El programa main.py presenta un menú con las siguientes opciones:
 
-- Agregar Palabra Clave: Permite al usuario ingresar palabras clave que desea buscar en las hojas de vida de los aspirantes.
-- Mostrar Palabras Clave: Muestra las palabras clave que se han ingresado.
-- Abrir Edge: Abre el navegador Microsoft Edge en la página de Google.
+    - Agregar Palabra Clave: Permite al usuario ingresar palabras clave que desea buscar en las hojas de vida de los aspirantes.
+
+    - Mostrar Palabras Clave: Muestra las palabras clave que se han ingresado.
+
+    - Abrir Edge: Abre el navegador Microsoft Edge en la página de Google.
     En la carpeta principal hay una imagen llamada 'bar.png', esta es una imagen de la barra de busqueda del navegador. Con esta imagen el bot busca similitudes en el navegador abierto y le da click realizando asi la busqueda de la pagina principal de google.
-- Ejecutar Bot: Ejecuta un bot que realiza las siguientes tareas:
+
+    - Ejecutar Bot: Ejecuta un bot que realiza las siguientes tareas:
     Busca las hojas de vida en la carpeta especificada.
     Abre los archivos .doc o .docx y toma una captura de la pantalla completa.
     Extrae el texto de la captura y analiza las palabras clave ingresadas por el usuario.
     Toma una captura de la región donde se encuentra la palabra clave.
     Si se encuentra la palabra clave, guarda el correo del aspirante en un archivo de texto en la carpeta Aspirantes_aprobados. Si no se encuentran las palabras clave, guarda el correo en la carpeta Aspirantes_no_aprobados para que el cliente tenga clasificados los aspirantes que más se adecuan a la vacante.
-- Salir: Finaliza el programa.
+
+    - Salir: Finaliza el programa.
 
 
 * En la carpeta 'PRUEBA', se encuentran las siguientes subcarpetas:
 
-- 'docs': Almacena las hojas de vida que se desean analizar.
-- 'screenshots': Almacena las capturas realizadas en las regiones donde se encuentran las palabras clave.
-- 'Aspirantes_aprobados': Almacena los correos de los aspirantes que cumplen con las aptitudes deseadas por la empresa.
-- 'Aspirantes_no_aprobados': Almacena los correos de los aspirantes que no cumplen con las aptitudes deseadas por la empresa.
+    - 'docs': Almacena las hojas de vida que se desean analizar.
+
+    - 'screenshots': Almacena las capturas realizadas en las regiones donde se encuentran las palabras clave.
+
+    - 'Aspirantes_aprobados': Almacena los correos de los aspirantes que cumplen con las aptitudes deseadas por la empresa.
+    
+    - 'Aspirantes_no_aprobados': Almacena los correos de los aspirantes que no cumplen con las aptitudes deseadas por la empresa.
 
 
 ## Construido con 🛠️
