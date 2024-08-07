@@ -9,9 +9,8 @@ if __name__ == "__main__":
         print("1. Agregar palabra clave")
         print("2. Mostrar palabras clave")
         print("3. Abrir Edge")
-        print("4. Abrir Bloc de Notas")
-        print("5. Abrir Documento")
-        print("6. Salir")
+        print("4. Ejecutar bot")
+        print("5. Salir")
 
         opcion = input("Selecciona una opción: ")
 
