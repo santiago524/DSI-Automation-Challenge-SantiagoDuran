@@ -1,0 +1,1 @@
+Aquí se almacenan los aspirantes aprobados
