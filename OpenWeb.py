@@ -10,7 +10,6 @@ class Open_app:
         os.system('start msedge')
         time.sleep(0.5)
         bar = robot.locateOnScreen('bar.png')
-        print(bar)
         time.sleep(1)
         if bar:
             robot.click(bar)
