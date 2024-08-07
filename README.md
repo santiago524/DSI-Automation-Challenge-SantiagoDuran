@@ -4,7 +4,7 @@ Se realizó un bot que es capaz de tomar decisiones, tales como aprobar o no el 
 
 ### Pre-requisitos 📋
 
-you should have to need this libraries:
+necesitas las siguientes librerias:
 - pytesseract
 - pyutogui
 - win32com
