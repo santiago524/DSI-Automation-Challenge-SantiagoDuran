@@ -6,7 +6,8 @@ import cv2 as cv
 import time
 import win32com.client
 import pygetwindow as gw
-
+import re
+from OpenWeb import Open_app
 
 tess.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'         
 
@@ -40,10 +41,19 @@ def capt_region(capture, keyword):
                 x, y, w, h= data['left'][pos], data['top'][pos], data['width'][pos], data['height'][pos] 
                 region = (x-20, y-20, w + 50, h + 50)
                 screenshot = robot.screenshot(region=region)
-                screenshot_path = os.path.join(os.getcwd(), '/screenshots', f'{keyword}_region{pos}.png')
+                screenshot_path = os.getcwd() + os.path.join('/screenshots', f'{keyword}_region{pos}.png')
                 screenshot.save(screenshot_path)
-                return data
+                return screenshot_path
     return None
+
+
+def get_email(text):
+    email_structure = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+    email = re.findall(email_structure, text)
+    
+    return email
+
 
 def open_doc(doc, keywords):
     time.sleep(1)
@@ -55,11 +65,9 @@ def open_doc(doc, keywords):
             path = os.path.join(doc, filename)
             document = word_app.Documents.Open(path)
             time.sleep(3)
-            #robot.hotkey('alt', 'tab')
-            # Maximiza la ventana de Word
-            word_app.WindowState = 1  # Maximiza la ventana
+            word_app.WindowState = 1
 
-            # Asegúrate de que la ventana de Word esté en el frente
+            
             word_window = gw.getWindowsWithTitle('Word')[0]
             word_window.activate()
 
@@ -68,16 +76,22 @@ def open_doc(doc, keywords):
 
             for keyword in keywords:
                 region = capt_region(capture, keyword)
-                print(region)
                 if region:
-                    print(f'capture completed')
+                    text = text_from_image(capture)
+                    email = get_email(text)                   
+                        # robot.write(f'nombre: {name}\n')
+                        # robot.write(f'correo: {email}.')
                 else:
                     print(f'no se encontro la palabra')
+            
+            if email:
+                open = Open_app()
+                open.open_text_edit()
 
             document.Close(False)
     word_app.Quit()
 
 if __name__ == '__main__':
     path = os.getcwd() + '\docs'
-    keywords = ['hola']
+    keywords = ['python', 'LabVIEW']
     open_doc(path, keywords)
