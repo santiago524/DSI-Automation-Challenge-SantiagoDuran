@@ -75,6 +75,11 @@ class Analysis:
     def add_keywords(self, palabra):
         self.keywords_selected.append(palabra)
         print(f'Palabra clave "{palabra}" agregada a la lista.')
+    
+    def show_keywords(self):
+        print("Palabras clave actuales:")
+        for palabra in self.keywords_selected:
+            print(f'- {palabra}')
 
     @staticmethod
     def get_email(text):

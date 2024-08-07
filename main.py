@@ -12,22 +12,23 @@ if __name__ == "__main__":
         print("4. Ejecutar bot")
         print("5. Salir")
 
-        opcion = input("Selecciona una opción: ")
+        opcion = input("Por favor digite una opción: ")
 
         if opcion == '1':
-            palabra = input("Ingresa la palabra clave: ")
-            bot.agregar_palabra_clave(palabra)
+            palabra = input("Por favor digite una palabra clave: ")
+            bot.add_keywords(palabra)
         elif opcion == '2':
-            bot.mostrar_palabras_clave()
+            bot.show_keywords()
         elif opcion == '3':
-            bot.abrir_edge()
+            bot.open_edge()
         elif opcion == '4':
-            bot.abrir_bloc_de_notas()
+            path = os.getcwd() + '\docs'
+            if bot.keywords_selected:
+                bot.open_doc(path, bot.keywords_selected)
+            else:
+                print('¡No has digitado palabras clave!')
         elif opcion == '5':
-            nombre_doc = input("Ingresa el nombre del documento (con extensión): ")
-            bot.navegar(nombre_doc)
-        elif opcion == '6':
-            print("Saliendo...")
+            print("Hasta luego!!!")
             break
         else:
             print("Opción no válida, por favor intenta de nuevo.")

@@ -170,7 +170,7 @@ def open_doc(self, doc, keywords):
 ## Construido con 🛠️
 
 * [pytesseract](https://pypi.org/project/pytesseract/) - an optical character recognition (OCR) tool for python
-* [pyutogui](https://pypi.org/project/PyAutoGUI/) - cross-platform GUI automation Python module for human beings
+* [pyautogui](https://pypi.org/project/PyAutoGUI/) - cross-platform GUI automation Python module for human beings
 * [win32com](https://pypi.org/project/pywin32/) - This is the readme for the Python for Win32 (pywin32) extensions
 * [Open_CV](https://pypi.org/project/opencv-python/) - Library for computer vision tools
 
